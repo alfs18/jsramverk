@@ -27,6 +27,11 @@ a {
 }
 
 body {
-    background-color: #eee;
+    background-color: #f9f0db;
+}
+
+nav {
+    background-color: #fff;
+    height: 2em;
 }
 </style>
