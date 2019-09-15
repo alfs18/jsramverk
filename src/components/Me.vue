@@ -2,8 +2,10 @@
 <main>
     <Nav />
     <h1>Om mig</h1>
-    <p>{{ text }}</p>
-    <p>{{ text2 }}</p>
+    <div class="outer-div">
+        <p>{{ text }}</p>
+        <p>{{ text2 }}</p>
+    </div>
 </main>
 </template>
 

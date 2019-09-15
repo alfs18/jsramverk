@@ -4,6 +4,8 @@
         <ul>
             <li><router-link to="/">Me</router-link></li>
             <li><router-link to="/reports/week/1">Kmom01</router-link></li>
+            <li><router-link to="/reports/week/2">Kmom02</router-link></li>
+            <li><router-link to="/registration">Registrera</router-link></li>
         </ul>
     </nav>
 </div>

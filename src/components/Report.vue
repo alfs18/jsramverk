@@ -2,38 +2,40 @@
 <main>
     <Nav />
     <h1>Redovisning</h1>
-    <p>{{ text }}</p>
-    <p>{{ text2 }}</p>
-    <pre># my-project
+    <div class="outer-div">
+        <p>{{ text }}</p>
+        <p>{{ text2 }}</p>
+        <pre># my-project
 
-    ## Project setup
-    ```
-    npm install
-    ```
+## Project setup
+```
+npm install
+```
 
-    ### Compiles and hot-reloads for development
-    ```
-    npm run serve
-    ```
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-    ### Compiles and minifies for production
-    ```
-    npm run build
-    ```
+### Compiles and minifies for production
+```
+npm run build
+```
 
-    ### Run your tests
-    ```
-    npm run test
-    ```
+### Run your tests
+```
+npm run test
+```
 
-    ### Lints and fixes files
-    ```
-    npm run lint
-    ```
+### Lints and fixes files
+```
+npm run lint
+```
 
-    ### Customize configuration
-    See [Configuration Reference](https://cli.vuejs.org/config/).
-    </pre>
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
+        </pre>
+    </div>
 
 </main>
 </template>
@@ -60,5 +62,6 @@ export default {
 <style scoped>
 pre {
     font-size: 16pt;
+    text-align: center;
 }
 </style>

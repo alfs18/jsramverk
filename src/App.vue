@@ -16,9 +16,13 @@ export default {
 
 <style>
 #app {
-  text-align: center;
+  text-align: left;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+h1 {
+    text-align: center;
 }
 
 p,
@@ -33,5 +37,26 @@ body {
 nav {
     background-color: #fff;
     height: 2em;
+    text-align: center;
+}
+
+.outer-div {
+    margin: 2rem auto;
+    width: 70vw;
+}
+
+@media (min-width: 768px) {
+    .outer-div {
+        width: 50vw;
+    }
+}
+
+@media (min-width: 1000px) {
+    .outer-div {
+        width: 40vw;
+    }
+    p {
+        padding-left: 3em;
+    }
 }
 </style>

@@ -3,6 +3,8 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 import Me from '@/components/Me'
 import Report from '@/components/Report'
+import Report2 from '@/components/Report2'
+import Registration from '@/components/Registration'
 
 Vue.use(VueRouter)
 
@@ -17,6 +19,16 @@ const router = new VueRouter({
             path: "/reports/week/1",
             name: "Report",
             component: Report
+        },
+        {
+            path: "/reports/week/2",
+            name: "Report2",
+            component: Report2
+        },
+        {
+            path: "/registration",
+            name: "Registration",
+            component: Registration
         }
     ]
 })
