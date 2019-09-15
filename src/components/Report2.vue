@@ -9,8 +9,8 @@
         </p>
         <p>
             Blev inte helt nöjd med den dock, då jag egentligen velat kunna klicka fram månaderna, så att de inte syntes från början, samt att år, månad och dag skulle vara i samma ruta, så att när man valt år, skulle den sen automatiskt gå vidare till månad och sen till dagar, men det hade jag tyvärr inte någon kunskap till.
-
         </p>
+        <p>GitHub-repot: https://github.com/alfs18/jsramverk</p>
     </div>
 
 </main>
