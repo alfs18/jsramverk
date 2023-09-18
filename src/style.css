@@ -1,0 +1,80 @@
+/* @import './assets/base.css'; */
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+pre {
+    white-space: pre-wrap;
+    font-family: serif;
+    font-size: 13pt;
+}
+
+@media (hover: hover) {
+  a:hover {
+    /* background-color: hsla(160, 100%, 37%, 0.2); */
+    /* border: 2px solid #1e9970; */
+    background-color: #036846;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+
+  section {
+      width: 40vw;
+  }
+}
+
+nav {
+    float: left;
+    padding: 2em;
+}
+
+nav .router-link-active {
+    background-color: black;
+    /* border: 2px solid #1e9970; */
+}
+
+section {
+    padding-top: 2em;
+    padding-left: 2em;
+}
+
+p, a {
+    font-size: 18px;
+}
+
+h1 {
+    padding-bottom: 0.5em;
+    color: #036846;
+}
+
+input[type='submit'] {
+    padding: 0.5em;
+    font-size: 12pt;
+}
+
+/* input[type='submit']:hover {
+    background-color: hsla(160, 100%, 37%, 1);
+} */

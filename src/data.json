@@ -1,0 +1,19 @@
+{
+    "kmoms": [
+        {
+            "name": "Kmom01",
+            "slug": "kmom01",
+            "id": 1,
+            "description":
+                "I detta kursmoment har jag försökt förstå Vue. Jag förstår verkligen inte allt, men betydligt mer än nyss.",
+            "link": "https://github.com/alfs18/jsramverk"
+        },
+        {
+            "name": "Kmom02",
+            "slug": "kmom02",
+            "id": 2,
+            "description":
+                "Formulär har designats. Blev det snyggt? Vem vet."
+        }
+    ]
+}

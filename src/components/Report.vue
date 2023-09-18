@@ -1,67 +1,90 @@
 <template>
 <main>
     <Nav />
-    <h1>Redovisning</h1>
-    <div class="outer-div">
-        <p>{{ text }}</p>
-        <p>{{ text2 }}</p>
-        <pre># my-project
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-        </pre>
+</main>
+<section class="destination">
+    <h1>{{name}}</h1>
+    <div class="kmom-details">
+        <pre>{{text}}</pre><br>
+        <a class="gh" href='https://github.com/alfs18/jsramverk'>Github</a>
     </div>
 
-</main>
+    <div class="edit-option">
+        <form v-if="token" id="createTextForm" @submit.prevent="submitEdit($data)">
+            <input type="submit" value="Edit">
+        </form>
+    </div>
+</section>
 </template>
 
 <script>
-import Nav from "./Nav.vue"
+import Nav from './Nav.vue'
+import axios from "axios"
 
 export default {
     name: 'Report',
     props: { },
     components: {
-        Nav
+        Nav,
     },
     data() {
         return {
-            text: "GitHub-repot: https://github.com/alfs18/jsramverk",
-            text2: "Innehållet från README.md:"
+            name: "Name!",
+            text: "Welcome!"
+        }
+    },
+    mounted() {
+        this.getMe();
+    },
+    methods: {
+        getMe() {
+            let that = this;
+            let kmom = parseInt(this.$route.params.kmom);
+            // console.log(this.$route.params.kmom)
+            fetch("http://localhost:1337/reports/week/" + kmom)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(result) {
+                // eslint-disable-next-line
+                // console.log(result);
+                // that.name = result.name;
+                // that.text = result.msg;
+
+                that.name = "Kursmoment" + " " + result.data.id;
+                that.text = result.data.report;
+            });
+        },
+        submitEdit: function () {
+            let kmom = parseInt(this.$route.params.kmom);
+            var payload = {
+                id: kmom
+            }
+            axios
+              .post('http://localhost:1337/reports/edit', payload, {
+                  headers: {
+                  'x-access-token': this.token
+                }
+              }).then(response => {
+                console.log('posting')
+                // console.log(response)
+                this.$router.push("/reports/edit/" + response.data.data.id);
+              });
         }
     }
 }
-
 </script>
 
-<style scoped>
-pre {
-    font-size: 16pt;
-    text-align: center;
-}
+<style>
+    section {
+        width: 20vw;
+    }
+
+    a.gh {
+        padding-top: 0.5em;
+    }
+
+    .edit-option {
+        padding-top: 2em;
+    }
 </style>

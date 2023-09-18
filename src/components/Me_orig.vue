@@ -1,13 +1,9 @@
 <template>
 <main>
     <Nav />
+    <h1>Smask</h1>
+    <p>{{ text }}</p>
 </main>
-<section>
-    <h1>Välkommen!</h1>
-    <div>
-        <p>{{ text }}</p>
-    </div>
-</section>
 </template>
 
 <script>
@@ -21,7 +17,7 @@ export default {
     },
     data() {
         return {
-            text: "Welcome!"
+            text: "Hello"
         }
     },
     mounted() {
@@ -30,17 +26,23 @@ export default {
     methods: {
         getMe() {
             let that = this;
-            fetch("http://localhost:1337/")
+            fetch("https://me-vue.jsramverk.se")
             .then(function(response) {
                 return response.json();
             })
             .then(function(result) {
                 // eslint-disable-next-line
-                // console.log(result);
-                that.text = result.data.msg;
+                console.log(result);
+                that.text = result.description;
             });
         }
     }
 };
 // console.log(Nav)
 </script>
+
+<style>
+    h1 {
+        color: blue;
+    }
+</style>
