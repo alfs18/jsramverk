@@ -4,9 +4,6 @@
 </main>
 <section class="form">
     <h1>Redigera text</h1>
-    <li>Visa alla texter som finns</li>
-    <li>Lägga till en knapp för att välja en specifik text</li>
-    <li>Skapa formulär för att ändra texten</li><br>
     <div class="">
         <form v-if="token" id="createTextForm" @submit.prevent="submitEditText($data)">
             <label class="input-label">Titel<br>
