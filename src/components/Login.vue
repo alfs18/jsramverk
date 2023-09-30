@@ -7,11 +7,11 @@
     <div class="">
         <form id="loginForm" @submit.prevent="submitLogin($data)">
             <label class="input-label">E-post<br>
-                <input type="email" name="email" placeholder="E-post" class="input-field" required value="a@b">
+                <input type="email" name="email" placeholder="E-post" class="input-field" required>
             </label>
 
             <label class="input-label">Lösenord<br>
-                <input type="password" name="password" placeholder="Lösenord" class="input-field" required value="asd">
+                <input type="password" name="password" placeholder="Lösenord" class="input-field" required>
             </label>
             <input type="submit" value="Logga in">
         </form>
