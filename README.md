@@ -1,3 +1,5 @@
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/alfs18/jsramverk/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/alfs18/jsramverk/?branch=master)
+
 # my-project
 
 ## Project setup
