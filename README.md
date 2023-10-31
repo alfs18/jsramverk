@@ -1,3 +1,4 @@
+[![Build Status](https://scrutinizer-ci.com/g/alfs18/jsramverk/badges/build.png?b=master)](https://scrutinizer-ci.com/g/alfs18/jsramverk/build-status/master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/alfs18/jsramverk/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/alfs18/jsramverk/?branch=master)
 
 # my-project
