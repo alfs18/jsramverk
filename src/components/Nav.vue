@@ -7,6 +7,7 @@
         <li><router-link to="/reports/create">Create report</router-link></li>
         <li><router-link to="/register">Create account</router-link></li>
         <li><router-link to="/login">Login</router-link></li>
+        <li><router-link to="/chat">Chat</router-link></li>
     </ul>
 </nav>
 </template>

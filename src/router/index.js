@@ -71,6 +71,21 @@ const routes = [
         name: 'EditText',
         component: ()=>import('../components/EditText.vue')
     },
+    {
+        path: '/chat',
+        name: 'Chat',
+        component: ()=>import('../components/Chat.vue')
+    },
+    {
+        path: '/connection/state',
+        name: 'ConnectionState',
+        component: ()=>import('../components/ConnectionState.vue')
+    },
+    {
+        path: '/connection/manager',
+        name: 'ConnectionManager',
+        component: ()=>import('../components/ConnectionManager.vue')
+    },
 ]
 
 const router = createRouter({

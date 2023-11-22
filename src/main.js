@@ -50,6 +50,8 @@ import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
 import router from './router'
+// import socket from './socket'
+import VueSocketIO from 'vue-socket.io'
 
 // createApp(App)
 // .use(router)
