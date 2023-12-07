@@ -18,6 +18,7 @@
           <i class="time">{{user.time}}</i> <b>{{user.name}}</b>: {{user.message}}
         </p>
     </div>
+
     <p><strong>Skriv nytt meddelande:</strong></p>
     <form class="input-div" @submit.prevent="submitMessage">
       <input type="text" placeholder="Type in text"
@@ -25,11 +26,16 @@
       <button type="submit">Submit</button>
     </form>
 
+    <br><br><button @click="submitSave" type="submit">Save chat</button>
+    {{ this.saved }}
+    <br><a href="/list">Se sparade konversationer</a>
+
 </section>
 </template>
 
 <script>
 import Nav from './Nav.vue';
+import axios from "axios"
 import SocketioService from '../services/socketio.service.js';
 
 export default {
@@ -41,7 +47,8 @@ export default {
       return {
           inputMessageText: '',
           user: '',
-          messages: []
+          messages: [],
+          saved: ''
       };
   },
   methods: {
@@ -74,11 +81,27 @@ export default {
           });
           // clear the input after the message is sent
           this.inputMessageText = "";
+          this.saved = "";
       },
       submitDisconnect() {
           SocketioService.disconnect();
           this.user = "";
-      }
+      },
+      submitSave() {
+          //save chat messages
+          axios
+            .post('http://localhost:1337/chat/save',
+            { msg: this.messages },
+            { headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Headers': 'x-access-token'
+                }
+            }).then(response => {
+              console.log('posting')
+              console.log(response)
+              this.saved = "Chat saved!"
+            });
+      },
   },
   beforeUnmount() {
     SocketioService.disconnect();

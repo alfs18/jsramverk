@@ -77,6 +77,11 @@ const routes = [
         component: ()=>import('../components/Chat.vue')
     },
     {
+        path: '/list',
+        name: 'List',
+        component: ()=>import('../components/List.vue')
+    },
+    {
         path: '/connection/state',
         name: 'ConnectionState',
         component: ()=>import('../components/ConnectionState.vue')

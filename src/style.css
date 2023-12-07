@@ -11,7 +11,7 @@
 a,
 .green {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
+  color: #036846;
   transition: 0.4s;
 }
 
@@ -26,6 +26,7 @@ pre {
     /* background-color: hsla(160, 100%, 37%, 0.2); */
     /* border: 2px solid #1e9970; */
     background-color: #036846;
+    color: hsla(160, 100%, 37%, 1);
   }
 }
 
@@ -53,6 +54,7 @@ nav {
 
 nav .router-link-active {
     background-color: black;
+    color: hsla(160, 100%, 37%, 1);
     /* border: 2px solid #1e9970; */
 }
 
